@@ -1,0 +1,15 @@
+{
+  "name": "back-end-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {},
+  "keywords": [
+    "api",
+    "back-end",
+    "express",
+    "send-email"
+  ],
+  "author": "José Lucas https://instagram.com/joselucasz_",
+  "license": "MIT"
+}
