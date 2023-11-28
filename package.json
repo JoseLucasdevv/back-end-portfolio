@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server.js",
+    "pre:dev": "npm run swagger"
+  },
   "keywords": [
     "api",
     "back-end",
@@ -11,5 +14,15 @@
     "send-email"
   ],
   "author": "José Lucas https://instagram.com/joselucasz_",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "nodemon": "^3.0.1"
+  }
 }
