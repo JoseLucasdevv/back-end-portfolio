@@ -23,9 +23,9 @@ async function emailController(req, res) {
 
   try {
     await transport.sendMail(email);
-    return "sucess Email send";
+    return res.status(201).send("Send Email Success");
   } catch (e) {
-    return "error in send Email";
+    return res.status(500).send("Error send Email");
   }
 }
 
