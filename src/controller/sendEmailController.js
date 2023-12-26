@@ -2,8 +2,10 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const transport = nodemailer.createTransport({
+  service: "gmail",
   host: process.env.HOST_EMAIL,
   port: process.env.PORT_EMAIL,
+  secure: true,
   auth: {
     user: process.env.USER_EMAIL,
     pass: process.env.PASS_EMAIL,
@@ -18,7 +20,7 @@ async function emailController(req, res) {
     to: "joselucas.dev@gmail.com",
     subject: "portfolio Subject",
     text: formMessage,
-    html: "<p>This mail is send using <b>nodemailer</b> on <b>heroku</b></p>",
+    html: `<p>Email:${formEmail} <br> Message:<b>${formMessage}<b/></p>`,
   };
 
   try {
