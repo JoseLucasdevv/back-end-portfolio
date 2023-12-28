@@ -1,4 +1,4 @@
-<h1 align="center">José Lucas | Portfólio</h1>
+<h1 align="center">José Lucas | SendEmail</h1>
 <p align="center">
   <img src="https://github.com/JoseLucasdevv/back-end-portfolio/assets/103385583/69e6d2fa-7ebb-43df-9653-716844b89db6" alt="Captura de Tela do Portfólio">
 
