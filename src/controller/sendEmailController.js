@@ -1,16 +1,4 @@
-const nodemailer = require("nodemailer");
-require("dotenv").config();
-
-const transport = nodemailer.createTransport({
-  service: "gmail",
-  host: process.env.HOST_EMAIL,
-  port: process.env.PORT_EMAIL,
-  secure: true,
-  auth: {
-    user: process.env.USER_EMAIL,
-    pass: process.env.PASS_EMAIL,
-  },
-});
+const transport = require("../transport");
 
 async function emailController(req, res) {
   const { formName, formEmail, formMessage } = req.body;
@@ -24,7 +12,11 @@ async function emailController(req, res) {
   };
 
   try {
+    if (!formName || !formEmail || !formMessage)
+      return res.status(500).send("error invalid request in body");
+
     await transport.sendMail(email);
+
     return res.status(201).send("Send Email Success");
   } catch (e) {
     return res.status(500).send("Error send Email");
